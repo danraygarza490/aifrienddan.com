@@ -1,8 +1,8 @@
-// components/Header.tsx
 'use client'
 
 import { useState } from 'react'
-import { Menu, X } from 'lucide-react' // Install: npm i lucide-react
+import Link from 'next/link' // ✅ Added
+import { Menu, X } from 'lucide-react'
 
 interface NavLink {
   href: string
@@ -21,17 +21,16 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-sm">
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
-        {/* Logo */}
-        <a 
+        {/* ✅ Changed <a> to <Link> */}
+        <Link 
           href="/" 
           className="flex items-center gap-2 text-xl font-bold tracking-tight transition-opacity hover:opacity-80"
           aria-label="AiFriendDan Home"
         >
           <span role="img" aria-label="Robot icon">🤖</span> 
           AiFriendDan
-        </a>
+        </Link>
 
-        {/* Desktop Nav */}
         <nav className="hidden md:flex gap-6" aria-label="Main navigation">
           {navLinks.map((link) => (
             <a
@@ -44,7 +43,6 @@ export function Header() {
           ))}
         </nav>
 
-        {/* CTA Buttons */}
         <div className="hidden md:flex gap-3">
           <button 
             className="rounded-md px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
@@ -60,7 +58,6 @@ export function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu Toggle */}
         <button
           className="md:hidden p-2 hover:bg-accent rounded-md transition-colors"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -71,7 +68,6 @@ export function Header() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-border bg-background px-6 py-4 animate-in slide-in-from-top duration-200">
           <nav className="flex flex-col gap-4" aria-label="Mobile navigation">
