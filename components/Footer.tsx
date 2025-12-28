@@ -1,4 +1,4 @@
-import { Github, Twitter, Linkedin } from 'lucide-react'
+import { Github, Twitter, Linkedin, Instagram } from 'lucide-react'
 
 export function Footer() {
   return (
@@ -6,21 +6,21 @@ export function Footer() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} AiFriendDan.com. Built with Next.js & Tailwind.
+            © {new Date().getFullYear()} AI Friend Dan. All rights reserved.
           </p>
           
           <div className="flex gap-4">
             <a 
-              href="https://github.com" 
+              href="https://www.linkedin.com/in/aifrienddan" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground transition-colors hover:text-foreground"
-              aria-label="GitHub"
+              aria-label="LinkedIn"
             >
-              <Github size={20} />
+              <Linkedin size={20} />
             </a>
             <a 
-              href="https://twitter.com" 
+              href="https://twitter.com/aifrienddan" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground transition-colors hover:text-foreground"
@@ -29,13 +29,13 @@ export function Footer() {
               <Twitter size={20} />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.instagram.com/aifrienddan/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground transition-colors hover:text-foreground"
-              aria-label="LinkedIn"
+              aria-label="Instagram"
             >
-              <Linkedin size={20} />
+              <Instagram size={20} />
             </a>
           </div>
         </div>

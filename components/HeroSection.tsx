@@ -28,25 +28,14 @@ export function HeroSection() {
         initial="hidden"
         animate="show"
       >
-        {/* Status Badge */}
-        <motion.div variants={item}>
-          <div className="inline-flex items-center rounded-full border border-border bg-secondary px-3 py-1 text-sm font-medium text-secondary-foreground">
-            <span 
-              className="mr-2 flex h-2 w-2 animate-pulse rounded-full bg-green-500" 
-              aria-label="Live status indicator"
-            />
-            v1.0 is now live
-          </div>
-        </motion.div>
-
         {/* Main Headline */}
         <motion.h1 
           variants={item}
           className="text-4xl font-extrabold tracking-tight text-foreground sm:text-6xl lg:text-7xl"
         >
-          Your Personal AI Companion{' '}
+          Dan the Man
           <br className="hidden sm:block" />
-          <span className="text-primary">Always by your side.</span>
+          <span className="text-primary">with the AI Plan.</span>
         </motion.h1>
 
         {/* Subheadline */}
@@ -54,7 +43,7 @@ export function HeroSection() {
           variants={item}
           className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl"
         >
-          Chat, learn, and grow with Dan. The AI friend designed to understand you better every day.
+          Your friendly guide to the world of AI. I'm here to help you understand and use artificial intelligence in your everyday life. No technical jargon, just simple, practical advice.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -67,31 +56,12 @@ export function HeroSection() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Start Chatting
+            Learn More
             <ArrowRight 
               size={20} 
               className="transition-transform group-hover:translate-x-1" 
             />
           </motion.button>
-          
-          <motion.button
-            className="group flex h-12 items-center justify-center gap-2 rounded-md border border-input bg-background px-8 text-lg font-medium transition-all hover:bg-accent hover:text-accent-foreground"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <Play size={20} />
-            View Demo
-          </motion.button>
-        </motion.div>
-
-        {/* Social Proof */}
-        <motion.div 
-          variants={item}
-          className="pt-8 text-sm text-muted-foreground"
-        >
-          <p className="flex items-center justify-center gap-2">
-            <span className="font-semibold text-foreground">1,234+</span> users already chatting
-          </p>
         </motion.div>
       </motion.div>
     </main>
