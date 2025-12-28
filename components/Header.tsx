@@ -4,16 +4,16 @@ import { useState } from 'react'
 import Link from 'next/link' // ✅ Added
 import { Menu, X } from 'lucide-react'
 
-interface NavLink {
-  href: string
-  label: string
-}
+// interface NavLink {
+//   href: string
+//   label: string
+// }
 
-const navLinks: NavLink[] = [
-  { href: '#features', label: 'Features' },
-  { href: '#pricing', label: 'Pricing' },
-  { href: '#about', label: 'About' }
-]
+// const navLinks: NavLink[] = [
+//   { href: '#features', label: 'Features' },
+//   { href: '#pricing', label: 'Pricing' },
+//   { href: '#about', label: 'About' }
+// ]
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

@@ -2,7 +2,7 @@
 'use client'
 
 import { motion } from 'framer-motion' // Install: npm i framer-motion
-import { ArrowRight, Play } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 const container = {
   hidden: { opacity: 0 },
@@ -43,7 +43,7 @@ export function HeroSection() {
           variants={item}
           className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl"
         >
-          Your friendly guide to the world of AI. I'm here to help you understand and use artificial intelligence in your everyday life. No technical jargon, just simple, practical advice.
+          Your friendly guide to the world of AI. I&apos;m here to help you understand and use artificial intelligence in your everyday life. No technical jargon, just simple, practical advice.
         </motion.p>
 
         {/* CTA Buttons */}
